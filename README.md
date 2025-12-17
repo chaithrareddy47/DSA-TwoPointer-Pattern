@@ -106,6 +106,42 @@ After filling zeroes:[1, 3, 12, 0, 0]
 
 ---
 
+---
+
+### Problem 4: Remove Duplicates from Sorted Array
+
+#### Pattern Used
+Two Pointers (Slow / Fast)
+
+#### Key Observation
+- The array is sorted
+- Duplicate elements always appear next to each other
+
+#### Pointer Roles
+- `i` → fast pointer (reads all elements)
+- `x` → slow pointer (stores last unique element)
+
+#### Core Logic
+- Compare current element with last unique element
+- If current value is greater, it is a new unique element
+- Move `x` forward and store the new value
+
+#### Why No Extra Loop Is Needed
+- Unlike Move Zeroes, we are not adding new values
+- We only keep unique elements at the front
+- Duplicates are skipped naturally
+
+#### Example
+Input: [1, 1, 2, 2, 3]
+
+Output (conceptually):[1, 2, 3, _, _]
+
+
+#### Learning
+Understanding pointer roles and dry running the condition
+made this problem clear.
+
+
 ## Final Takeaway
 
 - Two Pointer problems are about **movement and roles**
